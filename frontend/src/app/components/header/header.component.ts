@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { MenuService } from 'src/app/services/menu.service';
+
 
 @Component({
   selector: 'app-header',
@@ -8,13 +10,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+cart = [];
   constructor(
     public user: UserService,
-    private router: Router
+    private router: Router,
+    public menuService: MenuService
   ) { }
 
   ngOnInit() {
+    this.menuService.getCart().subscribe(data =>{
+      this.cart = [...data];
+    });
   }
 
   onLogout() {

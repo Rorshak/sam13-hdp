@@ -37,11 +37,14 @@ import { MenuCreateComponent } from './components/menu/menu-create/menu-create.c
 import { MenuListComponent } from './components/menu/menu-list/menu-list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SalesComponent } from './components/sales/sales.component';
-
+import { CartComponent} from './components/cart/cart.component';
+import { MenulistorderComponent } from './components/menulistorder/menulistorder.component';
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
+        CartComponent,
+        MenulistorderComponent,
         SuppliersComponent,
         InternalComponent,
         UserComponent,

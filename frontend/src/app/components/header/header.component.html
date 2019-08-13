@@ -9,7 +9,9 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <div *ngIf="!user.isLoggedIn(); else logout">
-            <li><a routerLink="/"><i class="material-icons">shopping_cart</i></a></li>
+            <li><a routerLink="/cart" mat-icon-button>
+                <mat-icon *ngIf="cart.length" matBadge="{{ cart.length }}" matBadgeColor="warn">shopping_cart</mat-icon>
+              </a></li>
             <!--<li routerLinkActive="active current"><a routerLink="/signup">Sign Up</a></li>
             <li routerLinkActive="active current"><a routerLink="/login">Sign In</a></li>-->
             <li>

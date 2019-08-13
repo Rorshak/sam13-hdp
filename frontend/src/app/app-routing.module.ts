@@ -9,7 +9,8 @@ import { SignUpComponent } from './components/user/sign-up/sign-up.component';
 import { UserComponent } from './components/user/user.component';
 import { SignInComponent } from './components/user/sign-in/sign-in.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-
+import { CartComponent} from './components/cart/cart.component';
+import { MenulistorderComponent } from './components/menulistorder/menulistorder.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ForgotPasswordComponent } from './components/user/forgot-password/forgot-password.component';
 import { EditProfileComponent } from './components/user-profile/edit-profile/edit-profile.component';
@@ -41,6 +42,14 @@ const routes: Routes = [
   {
     path: 'home', component: UserComponent,
     children: [{ path: '', component: HomeComponent }]
+  },
+  {
+    path: 'cart', component: CartComponent,
+    children: [{ path: '', component: CartComponent }]
+  },
+  {
+    path: 'menulistorder', component: MenulistorderComponent,
+    children: [{ path: '', component: MenulistorderComponent }]
   },
   {
     path: 'profile', component: UserProfileComponent, canActivate: [AuthGuard]

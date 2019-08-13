@@ -1,0 +1,40 @@
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Learn Code</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator,
+            etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+        <p>
+            <a href="" class="btn btn-primary my-2">Get Started</a>
+        </p>
+    </div>
+</section>
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of menuService.menus">
+
+
+               
+                    <div class="col s12 m12 l4">
+                        <mat-card>
+                            <mat-card-header>
+                                <mat-card-title>{{ item.name }}</mat-card-title>
+                            </mat-card-header>
+                            <img mat-card-image src="{{ item.image }}" style=" width: 100%; display: block;"
+                                alt="{{ item.name }}" data-holder-rendered="true">
+                            <mat-card-content>
+                                <p>{{ item.price | currency:'MXN' }}</p>
+                                <p>{{ item.description | truncate: [140, '...'] }}</p>
+                                <p class="rigth">
+                                        <button type="button" class="btn" (click)="addItemToCart(item)" [class.btn-outline-primary]="itemInCart(item).length">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </button>
+                                </p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
