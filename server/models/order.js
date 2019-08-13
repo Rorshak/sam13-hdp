@@ -4,7 +4,7 @@ const orderSchema = new Schema({
   firstName: String,
   lastName: String,
   email: String,
-  phone: Number,
+  phone: String,
   items: [{ type: Schema.Types.ObjectId, ref: 'Menu' }],
   date: { type: Date, default: Date.now() }
 });

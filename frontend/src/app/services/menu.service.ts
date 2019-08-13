@@ -17,7 +17,7 @@ export class MenuService {
   cartSub;
 
   readonly API = '/menus';
-
+  readonly APICHECK = '/checkout';
   constructor(private http: HttpClient) {
     this.selectedMenu = new Menu;
     /*added from product service.ts from cart*/ 
@@ -94,6 +94,6 @@ findItemInMenus(id) {
 
 checkout(data){
   console.log(data);
-
+  return this.http.post(environment.URL_API + this.APICHECK, data);
 }
 }//End class

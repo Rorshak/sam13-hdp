@@ -39,12 +39,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { CartComponent} from './components/cart/cart.component';
 import { MenulistorderComponent } from './components/menulistorder/menulistorder.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderComponent } from './components/order/order.component';
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         CartComponent,
         MenulistorderComponent,
+        CheckoutComponent,
+        OrderComponent,
         SuppliersComponent,
         InternalComponent,
         UserComponent,
